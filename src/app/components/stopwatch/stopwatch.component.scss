@@ -1,0 +1,20 @@
+.stopwatch-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .stopwatch-stopwatch {
+        p {
+            font-family: "Roboto Mono", monospace;
+            font-weight: 300;
+            font-size: 48px;
+        }
+        padding: 20px;
+    }
+
+    .stopwatch-buttons {
+        display: flex;
+        gap: 8px;
+    }
+}
