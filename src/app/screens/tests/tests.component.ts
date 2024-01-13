@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription, interval } from 'rxjs';
+import { TimerService } from 'src/app/services/timer.service';
 
 @Component({
   selector: 'app-tests',
@@ -9,38 +9,31 @@ import { Subscription, interval } from 'rxjs';
 export class TestsComponent implements OnInit {
 
   public counter: number = 0;
-  public startTime: number = 0;
-  public timerReference: Subscription | undefined;
 
-  ngOnInit(): void { }
+  constructor(private timerService: TimerService) {
+
+  }
+
+  ngOnInit(): void {
+    this.timerService.listerCounter().subscribe(counter => {
+      this.counter = counter;
+    });
+  }
 
   start() {
-    this.counter = 0;
-    this.resume();
+    this.timerService.start();
   }
 
   resume() {
-    this.startTime = Date.now() - this.counter;
-    this.counterStart();
+    this.timerService.resume();
   }
 
   pause() {
-    this.counterStop();
+    this.timerService.pause();
   }
 
   stop() {
-    this.counterStop();
-    this.counter = 0;
-  }
-
-  private counterStop() {
-    this.timerReference?.unsubscribe();
-  }
-
-  private counterStart() {
-    this.timerReference = interval(1).subscribe(() => {
-      this.counter = Date.now() - this.startTime;
-    });
+    this.timerService.stop();
   }
 
 }
