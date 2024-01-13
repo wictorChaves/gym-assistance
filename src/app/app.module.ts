@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { TestsComponent } from './screens/tests/tests.component';
+import { RootComponent } from './screens/root/root.component';
+import { PageNotFoundComponent } from './screens/page-not-found/page-not-found.component';
+import { MaterialComponentsModule } from './modules/material-components/material-components.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestsComponent,
+    RootComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     BrowserAnimationsModule,
-    MatSlideToggleModule
+    MaterialComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
