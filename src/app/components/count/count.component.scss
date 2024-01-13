@@ -2,20 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100vh;
-
-    .count-count {
-        p {
-            font-family: "Roboto Mono", monospace;
-            font-weight: 300;
-            font-size: 48px;
-        }
-        padding-bottom: 20px;
-    }
-
-    .count-buttons{
-        display: flex;
-        gap: 8px;
+    p {
+        font-family: "Roboto Mono", monospace;
+        font-weight: 300;
+        font-size: 48px;
+        padding: 20px 15px 10px 15px;
     }
 }

@@ -1,11 +1,5 @@
 <div class="count-content">
-    <div class="count-count">
-        <p>{{ counter | timerFormatter }}</p>
-    </div>
-    <div class="count-buttons">
-        <button *ngIf="showStartButton(state)" mat-fab (click)="start()"><mat-icon>play_arrow</mat-icon></button>
-        <button *ngIf="showResumeButton(state)" mat-fab (click)="resume()"><mat-icon>play_arrow</mat-icon></button>
-        <button *ngIf="showPauseButton(state)" mat-fab (click)="pause()"><mat-icon>pause</mat-icon></button>
-        <button *ngIf="showStopButton(state)" mat-fab (click)="stop()"><mat-icon>stop</mat-icon></button>
-    </div>
+    <button mat-fab (click)="add()"><mat-icon>add</mat-icon></button>
+    <p>{{ counter }}</p>
+    <button mat-fab (click)="remove()"><mat-icon>remove</mat-icon></button>
 </div>
