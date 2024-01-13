@@ -10,13 +10,15 @@ import { TestsComponent } from './screens/tests/tests.component';
 import { RootComponent } from './screens/root/root.component';
 import { PageNotFoundComponent } from './screens/page-not-found/page-not-found.component';
 import { MaterialComponentsModule } from './modules/material-components/material-components.module';
+import { TimerFormatterPipe } from './pipes/timer-formatter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestsComponent,
     RootComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TimerFormatterPipe
   ],
   imports: [
     BrowserModule,
