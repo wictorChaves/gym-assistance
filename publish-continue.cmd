@@ -1,13 +1,11 @@
 cd ..
 git checkout production
-del *.txt /Q
-del *.ico /Q
-del *.html /Q
-del *.js /Q
-del *.css /Q
-del *.png /Q
-del *.jpg /Q
-del *.gif /Q
+mkdir temp
+copy .gitignore temp\
+del *.* /Q
+copy temp\.gitignore .\
+del temp\*.* /Q
+rmdir temp
 rmdir "assets" /S /Q
 xcopy /s dist\gym-assistance .\
 git rm -r --cached .
