@@ -2,53 +2,53 @@ import { Observable, Subject, Subscription, interval, startWith } from 'rxjs';
 
 export class Timer {
 
-    private stopwatcher: Subject<number> = new Subject();
+    private counter: Subject<number> = new Subject();
     private timerReference: Subscription | undefined;
 
     private startTime: number = 0;
-    private internalstopwatcher: number = 0;
+    private internalCounter: number = 0;
 
     constructor() {
         this.initialValues();
-        this.stopwatcher.subscribe(stopwatcher => {
-            this.internalstopwatcher = stopwatcher;
+        this.counter.subscribe(counter => {
+            this.internalCounter = counter;
         });
     }
 
     protected initialValues() {
-        this.stopwatcher.pipe(startWith(0));
+        this.counter.pipe(startWith(0));
     }
 
     start() {
-        this.stopwatcher.next(0);
+        this.counter.next(0);
         this.resume();
     }
 
     resume() {
-        this.startTime = Date.now() - this.internalstopwatcher;
-        this.stopwatcherStart();
+        this.startTime = Date.now() - this.internalCounter;
+        this.counterStart();
     }
 
     pause() {
-        this.stopwatcherStop();
+        this.counterStop();
     }
 
     stop() {
-        this.stopwatcherStop();
-        this.stopwatcher.next(0);
+        this.counterStop();
+        this.counter.next(0);
     }
 
-    listerStopwatcher(): Observable<number> {
-        return this.stopwatcher;
+    listerCounter(): Observable<number> {
+        return this.counter;
     }
 
-    private stopwatcherStop() {
+    private counterStop() {
         this.timerReference?.unsubscribe();
     }
 
-    private stopwatcherStart() {
+    private counterStart() {
         this.timerReference = interval(1).subscribe(() => {
-            this.stopwatcher.next(Date.now() - this.startTime);
+            this.counter.next(Date.now() - this.startTime);
         });
     }
 

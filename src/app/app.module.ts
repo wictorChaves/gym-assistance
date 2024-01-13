@@ -12,7 +12,6 @@ import { PageNotFoundComponent } from './screens/page-not-found/page-not-found.c
 import { MaterialComponentsModule } from './modules/material-components/material-components.module';
 import { TimerFormatterPipe } from './pipes/timer-formatter.pipe';
 import { CountComponent } from './components/count/count.component';
-import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
     RootComponent,
     PageNotFoundComponent,
     TimerFormatterPipe,
-    CountComponent,
-    StopwatchComponent
+    CountComponent
   ],
   imports: [
     BrowserModule,
