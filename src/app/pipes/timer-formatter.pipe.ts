@@ -26,7 +26,7 @@ export class TimerFormatterPipe implements PipeTransform {
     let formattedSS = ss.toString().padStart(2, "0");
     let formattedMS = ms.toString().padStart(2, "0");
 
-    return `${formattedMM}:${formattedSS}:${formattedMS}`;
+    return `${formattedMM}:${formattedSS}.${formattedMS}`;
   }
 
 }

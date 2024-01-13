@@ -1,55 +1,42 @@
-import { Observable, Subject, Subscription, interval, startWith } from 'rxjs';
+import { Observable, Subject, startWith } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { TIMERSTATES } from './timer-service/timer-states';
+import { Timer } from './timer-service/timer';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TimerService {
+export class TimerService extends Timer {
 
-  private counter: Subject<number> = new Subject();
-  private timerReference: Subscription | undefined;
-
-  private startTime: number = 0;
-  private internalCounter: number = 0;
+  private state: Subject<string> = new Subject();
 
   constructor() {
-    this.counter.pipe(startWith(0));
-    this.counter.subscribe(counter => {
-      this.internalCounter = counter;
-    });
+    super();
+    this.state.pipe(startWith(TIMERSTATES.STOP));
   }
 
-  start() {
-    this.counter.next(0);
-    this.resume();
+  override start() {
+    this.state.next(TIMERSTATES.START);
+    super.start();
   }
 
-  resume() {
-    this.startTime = Date.now() - this.internalCounter;
-    this.counterStart();
+  override resume() {
+    this.state.next(TIMERSTATES.RESUME);
+    super.resume();
   }
 
-  pause() {
-    this.counterStop();
+  override pause() {
+    this.state.next(TIMERSTATES.PAUSE);
+    super.pause();
   }
 
-  stop() {
-    this.counterStop();
-    this.counter.next(0);
+  override stop() {
+    this.state.next(TIMERSTATES.STOP);
+    super.stop();
   }
 
-  listerCounter(): Observable<number> {
-    return this.counter;
-  }
-
-  private counterStop() {
-    this.timerReference?.unsubscribe();
-  }
-
-  private counterStart() {
-    this.timerReference = interval(1).subscribe(() => {
-      this.counter.next(Date.now() - this.startTime);
-    });
+  listerState(): Observable<string> {
+    return this.state;
   }
 
 }
