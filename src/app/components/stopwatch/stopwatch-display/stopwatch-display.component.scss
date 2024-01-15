@@ -1,0 +1,15 @@
+.stopwatch-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .stopwatch-stopwatch {
+        p {
+            font-weight: bold;
+            font-size: 48px;
+        }
+        padding: 20px;
+    }
+    
+}

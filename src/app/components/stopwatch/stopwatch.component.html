@@ -1,11 +1,9 @@
 <div class="stopwatch-content">
-    <div class="stopwatch-stopwatch">
-        <p>{{ timer | timerFormatter }}</p>
-    </div>
+    <app-stopwatch-display #display></app-stopwatch-display>
     <div class="stopwatch-buttons">
-        <button *ngIf="showStartButton(state)" mat-fab (click)="start()"><mat-icon>play_arrow</mat-icon></button>
-        <button *ngIf="showResumeButton(state)" mat-fab (click)="resume()"><mat-icon>play_arrow</mat-icon></button>
-        <button *ngIf="showPauseButton(state)" mat-fab (click)="pause()"><mat-icon>pause</mat-icon></button>
-        <button *ngIf="showStopButton(state)" mat-fab (click)="stop()"><mat-icon>stop</mat-icon></button>
+        <button *ngIf="showStartButton(display.state)" mat-fab (click)="display.start()"><mat-icon>play_arrow</mat-icon></button>
+        <button *ngIf="showResumeButton(display.state)" mat-fab (click)="display.resume()"><mat-icon>play_arrow</mat-icon></button>
+        <button *ngIf="showPauseButton(display.state)" mat-fab (click)="display.pause()"><mat-icon>pause</mat-icon></button>
+        <button *ngIf="showStopButton(display.state)" mat-fab (click)="display.stop()"><mat-icon>stop</mat-icon></button>
     </div>
 </div>

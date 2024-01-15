@@ -15,6 +15,7 @@ import { CountComponent } from './components/count/count.component';
 import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
 import { SimpleComponent } from './screens/simple/simple.component';
 import { StepsComponent } from './screens/steps/steps.component';
+import { StopwatchDisplayComponent } from './components/stopwatch/stopwatch-display/stopwatch-display.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StepsComponent } from './screens/steps/steps.component';
     CountComponent,
     StopwatchComponent,
     SimpleComponent,
-    StepsComponent
+    StepsComponent,
+    StopwatchDisplayComponent
   ],
   imports: [
     BrowserModule,
