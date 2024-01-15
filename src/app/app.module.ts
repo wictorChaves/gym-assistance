@@ -16,6 +16,7 @@ import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
 import { SimpleComponent } from './screens/simple/simple.component';
 import { StepsComponent } from './screens/steps/steps.component';
 import { StopwatchDisplayComponent } from './components/stopwatch/stopwatch-display/stopwatch-display.component';
+import { VanillaDirective } from './directives/vanilla.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { StopwatchDisplayComponent } from './components/stopwatch/stopwatch-disp
     StopwatchComponent,
     SimpleComponent,
     StepsComponent,
-    StopwatchDisplayComponent
+    StopwatchDisplayComponent,
+    VanillaDirective
   ],
   imports: [
     BrowserModule,
