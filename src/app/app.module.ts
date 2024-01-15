@@ -13,6 +13,7 @@ import { MaterialComponentsModule } from './modules/material-components/material
 import { TimerFormatterPipe } from './pipes/timer-formatter.pipe';
 import { CountComponent } from './components/count/count.component';
 import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
+import { SimpleComponent } from './screens/simple/simple.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
     PageNotFoundComponent,
     TimerFormatterPipe,
     CountComponent,
-    StopwatchComponent
+    StopwatchComponent,
+    SimpleComponent
   ],
   imports: [
     BrowserModule,

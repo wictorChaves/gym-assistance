@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [],
@@ -13,7 +14,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
   exports: [
     MatIconModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTabsModule
   ]
 })
 export class MaterialComponentsModule { }
