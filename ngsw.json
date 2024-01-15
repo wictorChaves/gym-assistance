@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1705281051357,
+  "timestamp": 1705330362581,
   "index": "/gym-assistance/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/gym-assistance/favicon.ico",
         "/gym-assistance/index.html",
-        "/gym-assistance/main.7e57495882992908.js",
+        "/gym-assistance/main.8cb9a68a0940f452.js",
         "/gym-assistance/manifest.webmanifest",
         "/gym-assistance/polyfills.856d41cc46017a8e.js",
         "/gym-assistance/runtime.51d6f164e705d1b3.js",
@@ -43,18 +43,18 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/gym-assistance/assets/icons/icon-128x128.png": "eb042435c669dffb8216464a5c8bb82c08833077",
-    "/gym-assistance/assets/icons/icon-144x144.png": "c87e771ba58ab7f936b9b11ab8b8000133f8e565",
-    "/gym-assistance/assets/icons/icon-152x152.png": "2e9529982435d88779531582c2f1b85df7ad9dc7",
-    "/gym-assistance/assets/icons/icon-192x192.png": "56854374a2c18b8c09ba0bb433d8a47c158e3b61",
-    "/gym-assistance/assets/icons/icon-384x384.png": "aac4f369a5bb34dabaa94c2ecea45da8d1b2b30d",
-    "/gym-assistance/assets/icons/icon-512x512.png": "c7276478514ed4b8805c27145a5a904837750968",
-    "/gym-assistance/assets/icons/icon-72x72.png": "e22e41a67d905881bb4ffedcfa1b1e17607c2c49",
-    "/gym-assistance/assets/icons/icon-96x96.png": "b0c10483c31a37e3aa67360a28aa5dfa96457121",
+    "/gym-assistance/assets/icons/icon-128x128.png": "8ca1b6177c2b231ad54200ba76fd4079f03e7d8e",
+    "/gym-assistance/assets/icons/icon-144x144.png": "6b50c5d288534541e6e2cd323bdcb6a22d38b3f3",
+    "/gym-assistance/assets/icons/icon-152x152.png": "60a969d7f6c3a3907e9db3112c0a16b18b36fcf8",
+    "/gym-assistance/assets/icons/icon-192x192.png": "b1151e0706fdba1e6aac547106cc98adb832c004",
+    "/gym-assistance/assets/icons/icon-384x384.png": "2966992e4f3148e9c2fcadee8ee7b3c0bdd2e2b2",
+    "/gym-assistance/assets/icons/icon-512x512.png": "46c2f6873d269859b7b884b63de28a93e663a80a",
+    "/gym-assistance/assets/icons/icon-72x72.png": "d1c32657ced93eb75069a418bbc31248f1ee596e",
+    "/gym-assistance/assets/icons/icon-96x96.png": "173ee6330239460b3046e263af46708b55bc35ef",
     "/gym-assistance/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/gym-assistance/index.html": "5dea513587b31a7d1692c4c336fda36fd2290571",
-    "/gym-assistance/main.7e57495882992908.js": "d606ab29d9b4be5b589cf14a54304c6f622a8b35",
-    "/gym-assistance/manifest.webmanifest": "736f26c6a64b7fab71d768a9ae7608ecc78c3e76",
+    "/gym-assistance/index.html": "e0aff3dd15311f0bccdff7a09ef89bd6ddab39a0",
+    "/gym-assistance/main.8cb9a68a0940f452.js": "cda994b93120885fd0075b91210cd167cf006796",
+    "/gym-assistance/manifest.webmanifest": "0102038abd39618bc7bc41898dfaf6b19565f7d8",
     "/gym-assistance/polyfills.856d41cc46017a8e.js": "0231f8fce5acd7e03d9b8a27896e9734d50855eb",
     "/gym-assistance/runtime.51d6f164e705d1b3.js": "f5ce07b4be627305d9a4650fc259b09ec1896a06",
     "/gym-assistance/styles.e06a9809e0fa01f5.css": "678cadd702d0344fe9bcdd18725c36697210f248"
