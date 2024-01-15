@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class SimpleComponent {
 
+  public repetitions: number = 0;
+
+  stopEvent() {
+    this.repetitions++;
+  }
+
+  reset() {
+    this.repetitions = 0;
+  }
+
 }

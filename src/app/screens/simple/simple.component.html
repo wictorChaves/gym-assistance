@@ -1,6 +1,9 @@
 <div class="root-content">
-    <p>Repetições</p>
-    <app-count></app-count>
     <p>Stopwatch</p>
-    <app-stopwatch></app-stopwatch>
+    <app-stopwatch (stopEvent)="stopEvent()"></app-stopwatch>
+    <p>Repetições</p>
+    <div class="count-content">
+        <p>{{ repetitions }}</p>
+    </div>
+    <button mat-raised-button color="accent" (click)="reset()">Reset</button>
 </div>

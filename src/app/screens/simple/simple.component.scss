@@ -5,7 +5,20 @@
     flex-direction: column;
     height: 100%;
     height: calc(100vh - 48px);
-    app-count {
+
+    app-stopwatch {
         padding-bottom: 20px;
+    }
+
+    .count-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        p {
+            font-weight: bold;
+            font-size: 48px;
+            padding: 20px 15px 10px 15px;
+        }
     }
 }

@@ -14,6 +14,7 @@ import { TimerFormatterPipe } from './pipes/timer-formatter.pipe';
 import { CountComponent } from './components/count/count.component';
 import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
 import { SimpleComponent } from './screens/simple/simple.component';
+import { StepsComponent } from './screens/steps/steps.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SimpleComponent } from './screens/simple/simple.component';
     TimerFormatterPipe,
     CountComponent,
     StopwatchComponent,
-    SimpleComponent
+    SimpleComponent,
+    StepsComponent
   ],
   imports: [
     BrowserModule,

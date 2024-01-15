@@ -1,0 +1,11 @@
+.root-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    height: calc(100vh - 48px);
+    app-count {
+        padding-bottom: 20px;
+    }
+}
