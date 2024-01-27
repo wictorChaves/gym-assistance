@@ -1,0 +1,141 @@
+.root-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    height: calc(100vh - 48px);
+
+    .exercising-icon {
+        display: inline-block;
+        animation-name: pulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        .left-arm {
+            display: inline-block;
+            animation-name: left-arm-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .fire-eye {
+            display: inline-block;
+            animation-name: fire-eye;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .right-arm {
+            display: inline-block;
+            animation-name: right-arm-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    .rest-icon {
+        .mouth {
+            display: inline-block;
+            animation-name: mouth;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .blow {
+            display: inline-block;
+            animation-name: blow;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    .stopwatch-buttons {
+        padding-bottom: 20px;
+        display: flex;
+        gap: 8px;
+    }
+
+    .count-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        p {
+            font-weight: bold;
+            font-size: 48px;
+            padding: 20px 15px 10px 15px;
+        }
+    }
+}
+
+@keyframes mouth {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+        margin-left: 3px;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blow {
+    0% {
+        transform: scale(1, 1.2);
+    }
+    50% {
+        transform: scale(1.6, 0.9);
+        margin-left: 4px;
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1, 1.2);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fire-eye {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.7, 0.9);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes left-arm-animation {
+    0% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(6deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes right-arm-animation {
+    0% {
+        transform: rotate(330deg) scaleX(-1);
+    }
+    50% {
+        transform: rotate(354deg) scaleX(-1);
+    }
+    100% {
+        transform: rotate(330deg) scaleX(-1);
+    }
+}

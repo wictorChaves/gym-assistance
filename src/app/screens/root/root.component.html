@@ -1,5 +1,8 @@
 <mat-tab-group [(selectedIndex)]="selectedTab" appVanilla (rightSwipe)="rightSwipe()"
     (leftSwipe)="leftSwipe()">
+    <mat-tab label="Repetições">
+        <app-repeats></app-repeats>
+    </mat-tab>
     <mat-tab label="Passos">
         <app-steps></app-steps>
     </mat-tab>

@@ -17,6 +17,7 @@ import { SimpleComponent } from './screens/simple/simple.component';
 import { StepsComponent } from './screens/steps/steps.component';
 import { StopwatchDisplayComponent } from './components/stopwatch/stopwatch-display/stopwatch-display.component';
 import { VanillaDirective } from './directives/vanilla.directive';
+import { RepeatsComponent } from './pages/repeats/repeats.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { VanillaDirective } from './directives/vanilla.directive';
     SimpleComponent,
     StepsComponent,
     StopwatchDisplayComponent,
-    VanillaDirective
+    VanillaDirective,
+    RepeatsComponent
   ],
   imports: [
     BrowserModule,
