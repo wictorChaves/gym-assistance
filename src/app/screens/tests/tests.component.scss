@@ -1,8 +1,10 @@
 //https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
 // Amber 50
+$animation-timer: 2s;
+
 .emoji-content {
     position: relative;
-    border: 1px solid red;
+    //border: 1px solid red;
     width: 130px;
     .emoji-head {
         width: 65px;
@@ -12,6 +14,11 @@
         position: absolute;
         left: 30px;
         overflow: hidden;
+
+        animation-name: head;
+        animation-duration: $animation-timer;
+        animation-iteration-count: infinite;
+
         &::before {
             content: "";
             width: 65px;
@@ -20,26 +27,58 @@
             border-right: 20px solid #ffca28;
             border-radius: 50%;
             top: -1px;
-            left: -10px;
+            left: -11px;
             transform: rotate(37deg);
             opacity: 0.7;
+
+            animation-name: head-shadow;
+            animation-duration: $animation-timer;
+            animation-iteration-count: infinite;
         }
-        .emoji-head-eyes {
+
+        & .emoji-head-eyes {
             position: relative;
             top: 15px;
             left: 6px;
-            .emoji-head-eye-left {
+            .emoji-head-eye {
                 width: 10px;
                 height: 10px;
                 border-radius: 50%;
                 position: absolute;
-            }
-            .emoji-head-eye-right {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                position: absolute;
-                left: 18px;
+                .eyebrow {
+                    background: black;
+                    width: 14px;
+                    height: 1px;
+                    display: block;
+                    border-radius: 20px;
+                    position: absolute;
+                }
+                &.emoji-head-eye-left {
+                    animation-name: fire-eye;
+                    animation-duration: $animation-timer;
+                    animation-iteration-count: infinite;
+
+                    .eyebrow {
+                        width: 10px;
+                        left: 3px;
+                        animation-name: eyebrow-left-animation;
+                        animation-duration: $animation-timer;
+                        animation-iteration-count: infinite;
+                    }
+                }
+                &.emoji-head-eye-right {
+                    left: 18px;
+
+                    animation-name: fire-eye;
+                    animation-duration: $animation-timer;
+                    animation-iteration-count: infinite;
+
+                    .eyebrow {
+                        animation-name: eyebrow-right-animation;
+                        animation-duration: $animation-timer;
+                        animation-iteration-count: infinite;
+                    }
+                }
             }
         }
         .emoji-head-scar {
@@ -48,6 +87,17 @@
             top: 6px;
             left: 41px;
         }
+        .emoji-head-drop {
+            position: absolute;
+            top: 14px;
+            left: 40px;
+            font-size: 8px;
+            opacity: 0;
+
+            animation-name: drop-animation;
+            animation-duration: $animation-timer;
+            animation-iteration-count: infinite;
+        }
         .emoji-head-mouth {
             width: 10px;
             height: 2px;
@@ -55,6 +105,11 @@
             position: absolute;
             top: 37px;
             left: 19px;
+            border-radius: 50%;
+
+            animation-name: mouth;
+            animation-duration: $animation-timer;
+            animation-iteration-count: infinite;
         }
     }
     .emoji-arm {
@@ -62,13 +117,7 @@
         left: 72px;
         top: 20px;
         width: 10px;
-        .emoji-arm-shoulder {
-            width: 32px;
-            height: 32px;
-            background-color: #ffca28;
-            border-radius: 50%;
-            position: absolute;
-        }
+
         .emoji-arm-biceps {
             width: 35px;
             height: 28px;
@@ -77,16 +126,40 @@
             position: absolute;
             left: 18px;
             top: 4px;
+
+            animation-name: biceps;
+            animation-duration: $animation-timer;
+            animation-iteration-count: infinite;
+
+            // background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1));
+            &::before {
+                content: "";
+                width: 35px;
+                height: 28px;
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.5;
+                border: 0;
+                background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1) 200%);
+
+                animation-name: biceps-pump;
+                animation-duration: $animation-timer;
+                animation-iteration-count: infinite;
+            }
         }
         .emoji-arm-forearm {
             width: 20px;
             height: 42px;
             background-color: #ffb300;
+            background-color: transparent;
             border-radius: 50%;
             position: absolute;
-            left: 31px;
+            left: 30.5px;
             top: -14px;
             transform: rotate(342deg);
+
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 179, 0, 1) 25%);
+            border-left: 1px solid #ffbd28;
         }
         .emoji-arm-hand {
             width: 20px;
@@ -104,5 +177,172 @@
         top: 20px;
         width: 51px;
         transform: scaleX(-1) scale(0.9);
+
+        animation-name: left-arm-animation;
+        animation-duration: $animation-timer;
+        animation-iteration-count: infinite;
+        .emoji-arm-forearm {
+            width: 20px;
+            height: 42px;
+            background-color: transparent;
+            border-radius: 50%;
+            position: absolute;
+            left: 31px;
+            top: -14px;
+            transform: rotate(342deg);
+        }
+        .emoji-arm-hand {
+            background-color: #ffca28;
+        }
+    }
+    .emoji-arm-right {
+        animation-name: right-arm-animation;
+        animation-duration: $animation-timer;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes drop-animation {
+    0% {
+        top: 14px;
+        opacity: 1;
+    }
+    100% {
+        top: 33px;
+        opacity: 0;
+    }
+}
+
+@keyframes eyebrow-left-animation {
+    0% {
+        transform: rotate(0deg);
+        top: -1px;
+    }
+    50% {
+        transform: rotate(27deg);
+        top: 1px;
+    }
+    100% {
+        transform: rotate(0deg);
+        top: -1px;
+    }
+}
+
+@keyframes eyebrow-right-animation {
+    0% {
+        transform: rotate(360deg);
+        top: -1px;
+        left: 3px;
+    }
+    50% {
+        transform: rotate(333deg);
+        top: 1px;
+        left: 0px;
+    }
+    100% {
+        transform: rotate(360deg);
+        top: -1px;
+        left: 3px;
+    }
+}
+
+@keyframes left-arm-animation {
+    0% {
+        transform: rotate(10deg) scale(-0.9, 0.9);
+    }
+    50% {
+        transform: rotate(0deg) scale(-0.9, 0.9);
+    }
+    100% {
+        transform: rotate(10deg) scale(-0.9, 0.9);
+    }
+}
+
+@keyframes right-arm-animation {
+    0% {
+        transform: rotate(350deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(350deg);
+    }
+}
+
+@keyframes biceps {
+    0% {
+        height: 28px;
+    }
+    50% {
+        height: 30px;
+        top: 2px;
+    }
+    100% {
+        height: 28px;
+    }
+}
+
+@keyframes biceps-pump {
+    0% {
+        height: 28px;
+        opacity: 0;
+    }
+    50% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 28px;
+        opacity: 0;
+    }
+}
+
+@keyframes head {
+    0% {
+        height: 65px;
+    }
+    50% {
+        height: 55px;
+        margin-top: 8px;
+        background-color: #ffc74f;
+    }
+    100% {
+        height: 65px;
+    }
+}
+
+@keyframes head-shadow {
+    0% {
+    }
+    50% {
+        border-right: 20px solid #ffb428;
+    }
+    100% {
+    }
+}
+
+@keyframes fire-eye {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.7, 0.9);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes mouth {
+    0% {
+        width: 10px;
+    }
+    50% {
+        width: 2px;
+        transform: translateX(2px);
+    }
+    100% {
+        width: 10px;
     }
 }
