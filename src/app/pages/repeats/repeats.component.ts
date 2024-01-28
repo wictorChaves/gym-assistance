@@ -24,6 +24,13 @@ export class RepeatsComponent {
     this.saveRepeatsModels();
   }
 
+  go() {
+    this.display.stop();
+    if (this.repeatsModels.currentRepeats >= this.repeatsModels.repeats) {
+      this.repeatsModels.currentRepeats = 0;
+    }
+  }
+
   nextRepeat() {
     if (this.repeatsModels.currentRepeats >= this.repeatsModels.repeats) {
       this.repeatsModels.currentRepeats = 0;
@@ -70,6 +77,6 @@ export class RepeatsComponent {
     this.repeatsModels = repeatsModels;
     this.saveRepeatsModels();
   }
-// (っ＾▿＾)💨
-// ᕙ(`▿´)ᕗ
+  // (っ＾▿＾)💨
+  // ᕙ(`▿´)ᕗ
 }
