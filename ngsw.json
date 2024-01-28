@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1706388027924,
+  "timestamp": 1706449147161,
   "index": "/gym-assistance/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/gym-assistance/favicon.ico",
         "/gym-assistance/index.html",
-        "/gym-assistance/main.2c80aa1de80fdb27.js",
+        "/gym-assistance/main.152134e4d6168cbc.js",
         "/gym-assistance/manifest.webmanifest",
         "/gym-assistance/polyfills.856d41cc46017a8e.js",
         "/gym-assistance/runtime.51d6f164e705d1b3.js",
@@ -52,8 +52,8 @@
     "/gym-assistance/assets/icons/icon-72x72.png": "d1c32657ced93eb75069a418bbc31248f1ee596e",
     "/gym-assistance/assets/icons/icon-96x96.png": "173ee6330239460b3046e263af46708b55bc35ef",
     "/gym-assistance/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/gym-assistance/index.html": "ab173b88769144afc2620173e58af809876c55be",
-    "/gym-assistance/main.2c80aa1de80fdb27.js": "8e3a13fcf31fa6c165f5c09003d1ad06d6d513a0",
+    "/gym-assistance/index.html": "763ee7d42877cce0e172a3446280350e523736ba",
+    "/gym-assistance/main.152134e4d6168cbc.js": "c9b249a65aaaffbdae3447d3be5113446e054d1b",
     "/gym-assistance/manifest.webmanifest": "0102038abd39618bc7bc41898dfaf6b19565f7d8",
     "/gym-assistance/polyfills.856d41cc46017a8e.js": "0231f8fce5acd7e03d9b8a27896e9734d50855eb",
     "/gym-assistance/runtime.51d6f164e705d1b3.js": "f5ce07b4be627305d9a4650fc259b09ec1896a06",
