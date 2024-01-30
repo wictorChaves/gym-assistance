@@ -27,7 +27,7 @@ export class RepeatsComponent {
   go() {
     this.display.stop();
     if (this.repeatsModels.currentRepeats >= this.repeatsModels.repeats) {
-      this.repeatsModels.currentRepeats = 0;
+      this.repeatsModels.currentRepeats = 1;
     }
   }
 
@@ -77,6 +77,5 @@ export class RepeatsComponent {
     this.repeatsModels = repeatsModels;
     this.saveRepeatsModels();
   }
-  // (っ＾▿＾)💨
-  // ᕙ(`▿´)ᕗ
+
 }

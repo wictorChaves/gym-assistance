@@ -18,6 +18,8 @@ import { StepsComponent } from './screens/steps/steps.component';
 import { StopwatchDisplayComponent } from './components/stopwatch/stopwatch-display/stopwatch-display.component';
 import { VanillaDirective } from './directives/vanilla.directive';
 import { RepeatsComponent } from './pages/repeats/repeats.component';
+import { EmojiWorkoutComponent } from './emojis/emoji-workout/emoji-workout.component';
+import { EmojiRestComponent } from './emojis/emoji-rest/emoji-rest.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { RepeatsComponent } from './pages/repeats/repeats.component';
     StepsComponent,
     StopwatchDisplayComponent,
     VanillaDirective,
-    RepeatsComponent
+    RepeatsComponent,
+    EmojiWorkoutComponent,
+    EmojiRestComponent
   ],
   imports: [
     BrowserModule,
