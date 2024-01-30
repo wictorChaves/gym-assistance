@@ -17,9 +17,10 @@ import { SimpleComponent } from './screens/simple/simple.component';
 import { StepsComponent } from './screens/steps/steps.component';
 import { StopwatchDisplayComponent } from './components/stopwatch/stopwatch-display/stopwatch-display.component';
 import { VanillaDirective } from './directives/vanilla.directive';
-import { RepeatsComponent } from './pages/repeats/repeats.component';
 import { EmojiWorkoutComponent } from './emojis/emoji-workout/emoji-workout.component';
 import { EmojiRestComponent } from './emojis/emoji-rest/emoji-rest.component';
+import { RepeatsComponent } from './screens/repeats/repeats.component';
+import { FullSetComponent } from './screens/full-set/full-set.component';
 
 @NgModule({
   declarations: [
@@ -34,9 +35,10 @@ import { EmojiRestComponent } from './emojis/emoji-rest/emoji-rest.component';
     StepsComponent,
     StopwatchDisplayComponent,
     VanillaDirective,
-    RepeatsComponent,
     EmojiWorkoutComponent,
-    EmojiRestComponent
+    EmojiRestComponent,
+    RepeatsComponent,
+    FullSetComponent
   ],
   imports: [
     BrowserModule,
