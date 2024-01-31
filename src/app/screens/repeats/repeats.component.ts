@@ -27,7 +27,7 @@ export class RepeatsComponent {
   go() {
     this.display.stop();
     if (this.repeatsModels.currentRepeats >= this.repeatsModels.repeats) {
-      this.repeatsModels.currentRepeats = 1;
+      this.repeatsModels.currentRepeats = 0;
     }
   }
 
