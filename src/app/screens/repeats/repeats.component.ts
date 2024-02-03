@@ -13,6 +13,7 @@ export class RepeatsComponent {
 
   @ViewChild('display') display!: StopwatchDisplayComponent;
   public repeatsModels: RepeatsModels = new RepeatsModels();
+  public stopwatchEditable: boolean = false;
 
   constructor(private localStorageService: LocalStorageRepeatsService) {
     this.repeatsModels = localStorageService.get();
@@ -76,6 +77,19 @@ export class RepeatsComponent {
   setAndSaveRepetitions(repeatsModels: RepeatsModels) {
     this.repeatsModels = repeatsModels;
     this.saveRepeatsModels();
+  }
+
+  listenTimestamp(timestamp: number) {
+    this.repeatsModels.limitStopwatch = timestamp;
+    this.stopwatchEditable = false;
+  }
+
+  stopwatchEdit() {
+    this.stopwatchEditable = true;
+  }
+
+  reachedLimit(currentTimer: number): boolean {
+    return !!this.repeatsModels.limitStopwatch && currentTimer >= this.repeatsModels.limitStopwatch;
   }
 
 }

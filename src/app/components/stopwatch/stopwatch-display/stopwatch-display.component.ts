@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TIMERSTATES } from 'src/app/services/timer-service/timer-states';
 import { TimerService } from 'src/app/services/timer.service';
 
@@ -11,6 +11,8 @@ export class StopwatchDisplayComponent {
 
   public timer: number = 0;
   public state: string = TIMERSTATES.STOP;
+
+  @Input() color: string = 'black';
 
   @Output() startEvent: EventEmitter<void> = new EventEmitter();
   @Output() resumeEvent: EventEmitter<void> = new EventEmitter();

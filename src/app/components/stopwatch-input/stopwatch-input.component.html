@@ -1,0 +1,11 @@
+<div class="stopwatch-content">
+    <div class="stopwatch-stopwatch">
+        <button (click)="remove()" mat-mini-fab><mat-icon>remove</mat-icon></button>
+        <p><span (click)="edit('MINUTES')" [ngClass]="{ 'active': currentActive == 'MINUTES' }">{{ minutes | padLeft:2
+                }}</span>:<span (click)="edit('SECONDS')" [ngClass]="{ 'active': currentActive == 'SECONDS' }">{{
+                seconds | padLeft:2 }}</span>.<span (click)="edit('MILISECONDS')"
+                [ngClass]="{ 'active': currentActive == 'MILISECONDS' }">{{ milliseconds | padLeft:2 }}</span></p>
+        <button (click)="add()" mat-mini-fab><mat-icon>add</mat-icon></button>
+        <button class="set-button" (click)="sendTimestamp()" mat-mini-fab color="primary"><mat-icon>done</mat-icon></button>
+    </div>
+</div>

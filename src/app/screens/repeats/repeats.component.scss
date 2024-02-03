@@ -6,6 +6,32 @@
     height: 100%;
     height: calc(100vh - 48px);
 
+    .stopwatch {
+        text-align: center;
+        padding-bottom: 6px;
+        .stopwatch-display-content {
+            display: flex;
+            padding: 0px 30px;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            .edit-button {
+                margin-top: -10px;
+                position: absolute;
+                right: 0;
+            }
+        }
+        span {
+            margin-top: -20px;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            color: #B00020;
+        }
+    }
+
     .exercising-icon {
         display: inline-block;
         animation-name: pulse;

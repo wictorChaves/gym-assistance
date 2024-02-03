@@ -1,0 +1,40 @@
+.stopwatch-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .stopwatch-stopwatch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 50px;
+        position: relative;
+        p {
+            font-weight: bold;
+            font-size: 48px;
+            padding: 8px 12px 0px 12px;
+        }
+        span {
+            cursor: pointer;
+            &.active {
+                animation-name: active;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+        }
+        .set-button {
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+@keyframes active {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

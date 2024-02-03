@@ -21,6 +21,9 @@ import { EmojiWorkoutComponent } from './emojis/emoji-workout/emoji-workout.comp
 import { EmojiRestComponent } from './emojis/emoji-rest/emoji-rest.component';
 import { RepeatsComponent } from './screens/repeats/repeats.component';
 import { FullSetComponent } from './screens/full-set/full-set.component';
+import { StopwatchInputComponent } from './components/stopwatch-input/stopwatch-input.component';
+import { PadLeftPipe } from './pipes/pad-left.pipe';
+import { EmojiGoComponent } from './emojis/emoji-go/emoji-go.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { FullSetComponent } from './screens/full-set/full-set.component';
     EmojiWorkoutComponent,
     EmojiRestComponent,
     RepeatsComponent,
-    FullSetComponent
+    FullSetComponent,
+    StopwatchInputComponent,
+    PadLeftPipe,
+    EmojiGoComponent
   ],
   imports: [
     BrowserModule,

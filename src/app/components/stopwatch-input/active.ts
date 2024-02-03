@@ -1,0 +1,6 @@
+export const ACTIVE = {
+    MINUTES: 'MINUTES',
+    SECONDS: 'SECONDS',
+    MILISECONDS: 'MILISECONDS',
+    NONE: 'NONE'
+};

@@ -1,7 +1,24 @@
 <div class="root-content">
+
     <app-emoji-workout *ngIf="showRestButton(display.state)"></app-emoji-workout>
-    <app-emoji-rest *ngIf="showStopButton(display.state)"></app-emoji-rest>
-    <app-stopwatch-display #display></app-stopwatch-display>
+
+    <app-emoji-go *ngIf="showStopButton(display.state) && reachedLimit(display.timer)"></app-emoji-go>
+    <app-emoji-rest *ngIf="showStopButton(display.state) && !reachedLimit(display.timer)"></app-emoji-rest>
+
+    <section class="stopwatch" [hidden]="stopwatchEditable">
+        <div class="stopwatch-display-content">
+            <app-stopwatch-display [color]="reachedLimit(display.timer) ? '#D50000' : 'black'"
+                #display></app-stopwatch-display>
+            <button class="edit-button" (click)="stopwatchEdit()" mat-mini-fab
+                color="primary"><mat-icon>priority_high</mat-icon></button>
+        </div>
+        <span *ngIf="repeatsModels.limitStopwatch">{{ repeatsModels.limitStopwatch | timerFormatter }}</span>
+    </section>
+    <section [hidden]="!stopwatchEditable">
+        <app-stopwatch-input (listenTimestamp)="listenTimestamp($event)"></app-stopwatch-input>
+    </section>
+
+
     <div class="stopwatch-buttons">
         <button *ngIf="showRestButton(display.state)" mat-raised-button color="accent"
             (click)="rest()"><mat-icon>airline_seat_flat</mat-icon>Descançar</button>
