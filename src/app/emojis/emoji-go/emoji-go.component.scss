@@ -1,4 +1,4 @@
-$animation-timer: 2s;
+$animation-timer: 4s;
 
 .emoji-content {
     position: relative;
@@ -30,10 +30,6 @@ $animation-timer: 2s;
             left: -11px;
             transform: rotate(37deg);
             opacity: 0.7;
-
-            animation-name: head-shadow;
-            animation-duration: $animation-timer;
-            animation-iteration-count: infinite;
         }
 
         & .emoji-head-eyes {
@@ -45,6 +41,32 @@ $animation-timer: 2s;
                 height: 10px;
                 border-radius: 50%;
                 position: absolute;
+                .cute-eye {
+                    background-color: #000000;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    margin-top: 5px;
+                    margin-left: 2px;
+                    position: relative;
+                    .cute-eye-inside {
+                        background-color: #3cbb31;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 2px;
+                        left: 2px;
+                        &::before {
+                            content: "";
+                            display: block;
+                            background-color: white;
+                            width: 3px;
+                            height: 3px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
                 .eyebrow {
                     background: black;
                     width: 14px;
@@ -54,9 +76,9 @@ $animation-timer: 2s;
                     position: absolute;
                 }
                 &.emoji-head-eye-left {
-                    animation-name: fire-eye;
-                    animation-duration: $animation-timer;
-                    animation-iteration-count: infinite;
+                    //animation-name: fire-eye;
+                    //animation-duration: $animation-timer;
+                    //animation-iteration-count: infinite;
 
                     .eyebrow {
                         width: 10px;
@@ -69,9 +91,9 @@ $animation-timer: 2s;
                 &.emoji-head-eye-right {
                     left: 18px;
 
-                    animation-name: fire-eye;
-                    animation-duration: $animation-timer;
-                    animation-iteration-count: infinite;
+                    //animation-name: fire-eye;
+                    //animation-duration: $animation-timer;
+                    //animation-iteration-count: infinite;
 
                     .eyebrow {
                         animation-name: eyebrow-right-animation;
@@ -81,20 +103,9 @@ $animation-timer: 2s;
                 }
             }
         }
-        .emoji-head-drop {
-            position: absolute;
-            top: 14px;
-            left: 40px;
-            font-size: 8px;
-            opacity: 0;
-
-            animation-name: drop-animation;
-            animation-duration: $animation-timer;
-            animation-iteration-count: infinite;
-        }
         .emoji-head-mouth {
-            width: 10px;
-            height: 2px;
+            width: 6px;
+            height: 5px;
             background-color: black;
             position: absolute;
             top: 37px;
@@ -104,6 +115,22 @@ $animation-timer: 2s;
             animation-name: mouth;
             animation-duration: $animation-timer;
             animation-iteration-count: infinite;
+
+            position: relative;
+            overflow: hidden;
+            .emoji-head-mouth-tongue {
+                background-color: #eb0000;
+                border-radius: 50%;
+                width: 10px;
+                height: 5px;
+                right: -4px;
+                bottom: -2px;
+                position: absolute;
+
+                animation-name: tongue;
+                animation-duration: $animation-timer;
+                animation-iteration-count: infinite;
+            }
         }
     }
     .emoji-arm {
@@ -193,21 +220,16 @@ $animation-timer: 2s;
         animation-iteration-count: infinite;
     }
     .message {
-        position: absolute;
         text-transform: uppercase;
         font-weight: bold;
         right: 5px;
         top: 15px;
-        text-shadow:
-            #ffffff 0px 0px 10px,
-            #ffffff 0px 0px 10px,
-            #ffffff 0px 0px 10px,
-            #ffffff 0px 0px 10px,
-            #ffffff 0px 0px 10px;
+        text-shadow: #000000 1px 1px 0px;
         span {
             &:nth-child(1) {
                 color: #eb0000;
                 display: inline-block;
+                position: absolute;
 
                 animation:
                     bo-animation $animation-timer,
@@ -217,19 +239,11 @@ $animation-timer: 2s;
             &:nth-child(2) {
                 color: #eb0000;
                 display: inline-block;
+                position: absolute;
 
                 animation:
                     ra-animation $animation-timer,
                     ra-trembling-animation 0.6s;
-                animation-iteration-count: infinite;
-            }
-            &:nth-child(3) {
-                color: #eb0000;
-                display: inline-block;
-
-                animation:
-                    exclamation-animation $animation-timer,
-                    exclamation-trembling-animation 0.6s;
                 animation-iteration-count: infinite;
             }
         }
@@ -238,47 +252,24 @@ $animation-timer: 2s;
 
 @keyframes bo-animation {
     0% {
-        opacity: 0;
+        left: 6px;
+        top: 16px;
     }
-    25% {
-        opacity: 1;
+    16% {
+        left: 29px;
+        top: 37px;
     }
-    75% {
-        opacity: 1;
+    32% {
+        left: 6px;
+        top: 16px;
     }
     100% {
-        opacity: 1;
+        left: 6px;
+        top: 16px;
     }
 }
 
 @keyframes bo-trembling-animation {
-    0% {
-        transform: rotate(6deg);
-    }
-    50% {
-        transform: rotate(20deg);
-    }
-    100% {
-        transform: rotate(6deg);
-    }
-}
-
-@keyframes ra-animation {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes ra-trembling-animation {
     0% {
         transform: rotate(351deg);
     }
@@ -290,41 +281,36 @@ $animation-timer: 2s;
     }
 }
 
-@keyframes exclamation-animation {
+@keyframes ra-animation {
     0% {
+        left: 62px;
+        top: 31px;
         opacity: 0;
     }
-    25% {
+    20% {
+        left: 62px;
+        top: 31px;
         opacity: 0;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes exclamation-trembling-animation {
-    0% {
-        transform: rotate(16deg);
     }
     50% {
-        transform: rotate(0deg);
+        left: 98px;
+        top: 6px;
     }
     100% {
-        transform: rotate(16deg);
+        left: 98px;
+        top: 6px;
     }
 }
 
-@keyframes drop-animation {
+@keyframes ra-trembling-animation {
     0% {
-        top: 14px;
-        opacity: 1;
+        transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(20deg);
     }
     100% {
-        top: 33px;
-        opacity: 0;
+        transform: rotate(6deg);
     }
 }
 
@@ -333,9 +319,13 @@ $animation-timer: 2s;
         transform: rotate(0deg);
         top: -1px;
     }
-    50% {
+    16% {
         transform: rotate(27deg);
         top: 1px;
+    }
+    32% {
+        transform: rotate(0deg);
+        top: -1px;
     }
     100% {
         transform: rotate(0deg);
@@ -349,10 +339,15 @@ $animation-timer: 2s;
         top: -1px;
         left: 3px;
     }
-    50% {
+    16% {
         transform: rotate(333deg);
         top: 1px;
         left: 0px;
+    }
+    32% {
+        transform: rotate(360deg);
+        top: -1px;
+        left: 3px;
     }
     100% {
         transform: rotate(360deg);
@@ -365,8 +360,11 @@ $animation-timer: 2s;
     0% {
         transform: rotate(10deg) scale(-0.9, 0.9);
     }
-    50% {
+    16% {
         transform: rotate(0deg) scale(-0.9, 0.9);
+    }
+    32% {
+        transform: rotate(10deg) scale(-0.9, 0.9);
     }
     100% {
         transform: rotate(10deg) scale(-0.9, 0.9);
@@ -377,8 +375,11 @@ $animation-timer: 2s;
     0% {
         transform: rotate(350deg);
     }
-    50% {
+    16% {
         transform: rotate(360deg);
+    }
+    32% {
+        transform: rotate(350deg);
     }
     100% {
         transform: rotate(350deg);
@@ -415,25 +416,20 @@ $animation-timer: 2s;
 
 @keyframes head {
     0% {
+        margin-top: 0px;
         height: 65px;
     }
-    50% {
+    16% {
         height: 55px;
         margin-top: 8px;
-        background-color: #ffc74f;
     }
-    100% {
+    32% {
+        margin-top: 0px;
         height: 65px;
     }
-}
-
-@keyframes head-shadow {
-    0% {
-    }
-    50% {
-        border-right: 20px solid #ffb428;
-    }
     100% {
+        margin-top: 0px;
+        height: 65px;
     }
 }
 
@@ -451,13 +447,46 @@ $animation-timer: 2s;
 
 @keyframes mouth {
     0% {
-        width: 10px;
+        width: 11px;
+        height: 6px;
+        border-radius: 10% 10% 30% 30%;
     }
-    50% {
-        width: 2px;
-        transform: translateX(2px);
+    12% {
+        width: 6px;
+        height: 5px;
+        border-radius: 50% 50% 50% 50%;
+    }
+    24% {
+        width: 6px;
+        height: 5px;
+        border-radius: 50% 50% 50% 50%;
+    }
+    36% {
+        width: 11px;
+        height: 6px;
+        border-radius: 10% 10% 30% 30%;
     }
     100% {
-        width: 10px;
+        width: 11px;
+        height: 6px;
+        border-radius: 10% 10% 30% 30%;
+    }
+}
+
+@keyframes tongue {
+    0% {
+        right: -4px;
+    }
+    12% {
+        right: -2px;
+    }
+    24% {
+        right: -2px;
+    }
+    36% {
+        right: -4px;
+    }
+    100% {
+        right: -4px;
     }
 }
