@@ -57,13 +57,20 @@ $animation-timer: 4s;
                         position: absolute;
                         top: 2px;
                         left: 2px;
-                        &::before {
-                            content: "";
-                            display: block;
+                        .cute-eye-inside-light {
                             background-color: white;
                             width: 3px;
                             height: 3px;
                             border-radius: 50%;
+                        }
+                        .cute-eye-inside-black {
+                            background-color: black;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            left: 2px;
+                            top: 2px;
+                            position: absolute;
                         }
                     }
                 }
@@ -132,92 +139,6 @@ $animation-timer: 4s;
                 animation-iteration-count: infinite;
             }
         }
-    }
-    .emoji-arm {
-        position: relative;
-        left: 72px;
-        top: 20px;
-        width: 10px;
-
-        .emoji-arm-biceps {
-            width: 35px;
-            height: 28px;
-            background-color: #ffc107;
-            border-radius: 50%;
-            position: absolute;
-            left: 18px;
-            top: 4px;
-
-            animation-name: biceps;
-            animation-duration: $animation-timer;
-            animation-iteration-count: infinite;
-            &::before {
-                content: "";
-                width: 35px;
-                height: 28px;
-                position: absolute;
-                border-radius: 50%;
-                opacity: 0.5;
-                border: 0;
-                background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1) 200%);
-
-                animation-name: biceps-pump;
-                animation-duration: $animation-timer;
-                animation-iteration-count: infinite;
-            }
-        }
-        .emoji-arm-forearm {
-            width: 20px;
-            height: 42px;
-            background-color: #ffb300;
-            background-color: transparent;
-            border-radius: 50%;
-            position: absolute;
-            left: 30.5px;
-            top: -14px;
-            transform: rotate(342deg);
-
-            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 179, 0, 1) 25%);
-            border-left: 1px solid #ffbd28;
-        }
-        .emoji-arm-hand {
-            width: 20px;
-            height: 13px;
-            background-color: #ffa000;
-            border-radius: 50%;
-            position: absolute;
-            left: 22px;
-            top: -15px;
-        }
-    }
-    .emoji-arm-left {
-        position: relative;
-        left: 0px;
-        top: 20px;
-        width: 51px;
-        transform: scaleX(-1) scale(0.9);
-
-        animation-name: left-arm-animation;
-        animation-duration: $animation-timer;
-        animation-iteration-count: infinite;
-        .emoji-arm-forearm {
-            width: 20px;
-            height: 42px;
-            background-color: transparent;
-            border-radius: 50%;
-            position: absolute;
-            left: 31px;
-            top: -14px;
-            transform: rotate(342deg);
-        }
-        .emoji-arm-hand {
-            background-color: #ffca28;
-        }
-    }
-    .emoji-arm-right {
-        animation-name: right-arm-animation;
-        animation-duration: $animation-timer;
-        animation-iteration-count: infinite;
     }
     .message {
         text-transform: uppercase;
@@ -353,64 +274,6 @@ $animation-timer: 4s;
         transform: rotate(360deg);
         top: -1px;
         left: 3px;
-    }
-}
-
-@keyframes left-arm-animation {
-    0% {
-        transform: rotate(10deg) scale(-0.9, 0.9);
-    }
-    16% {
-        transform: rotate(0deg) scale(-0.9, 0.9);
-    }
-    32% {
-        transform: rotate(10deg) scale(-0.9, 0.9);
-    }
-    100% {
-        transform: rotate(10deg) scale(-0.9, 0.9);
-    }
-}
-
-@keyframes right-arm-animation {
-    0% {
-        transform: rotate(350deg);
-    }
-    16% {
-        transform: rotate(360deg);
-    }
-    32% {
-        transform: rotate(350deg);
-    }
-    100% {
-        transform: rotate(350deg);
-    }
-}
-
-@keyframes biceps {
-    0% {
-        height: 28px;
-    }
-    50% {
-        height: 30px;
-        top: 2px;
-    }
-    100% {
-        height: 28px;
-    }
-}
-
-@keyframes biceps-pump {
-    0% {
-        height: 28px;
-        opacity: 0;
-    }
-    50% {
-        height: 30px;
-        opacity: 1;
-    }
-    100% {
-        height: 28px;
-        opacity: 0;
     }
 }
 
