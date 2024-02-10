@@ -9,8 +9,7 @@
         <div class="stopwatch-display-content">
             <app-stopwatch-display [color]="reachedLimit(display.timer) ? '#D50000' : 'black'"
                 #display></app-stopwatch-display>
-            <button class="edit-button" (click)="stopwatchEdit()" mat-mini-fab
-                color="primary"><mat-icon>priority_high</mat-icon></button>
+            <mat-icon color="primary" class="edit-button" (click)="stopwatchEdit()">edit</mat-icon>
         </div>
         <span *ngIf="repeatsModels.limitStopwatch">{{ repeatsModels.limitStopwatch | timerFormatter }}</span>
     </section>

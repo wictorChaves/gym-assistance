@@ -1,5 +1,4 @@
 const pathFilesVersion = [
-    './angular.json',
     './package.json',
     './src/assets/configs.json'
 ];

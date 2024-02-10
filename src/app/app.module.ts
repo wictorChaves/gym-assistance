@@ -24,6 +24,7 @@ import { FullSetComponent } from './screens/full-set/full-set.component';
 import { StopwatchInputComponent } from './components/stopwatch-input/stopwatch-input.component';
 import { PadLeftPipe } from './pipes/pad-left.pipe';
 import { EmojiGoComponent } from './emojis/emoji-go/emoji-go.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { EmojiGoComponent } from './emojis/emoji-go/emoji-go.component';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     BrowserAnimationsModule,
-    MaterialComponentsModule
+    MaterialComponentsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
