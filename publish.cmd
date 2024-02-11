@@ -1,4 +1,3 @@
-call node version
 call npm run build-prod
 copy publish-continue.cmd dist\publish-continue.cmd
 cd dist
