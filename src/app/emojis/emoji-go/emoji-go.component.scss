@@ -4,7 +4,7 @@ $animation-timer: 4s;
     position: relative;
     width: 128px;
     height: 65px;
-    overflow: hidden;
+    //overflow: hidden;
     padding-left: 2px;
     .emoji-head {
         width: 65px;
@@ -42,68 +42,28 @@ $animation-timer: 4s;
                 border-radius: 50%;
                 position: absolute;
                 .cute-eye {
-                    background-color: #000000;
-                    width: 12px;
-                    height: 12px;
+                    background-color: black;
+                    width: 6px;
+                    height: 6px;
                     border-radius: 50%;
-                    margin-top: 5px;
-                    margin-left: 2px;
+                    margin-top: 8px;
+                    margin-left: 5px;
                     position: relative;
-                    .cute-eye-inside {
-                        background-color: #3cbb31;
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        position: absolute;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        background-color: white;
+                        width: 3px;
+                        height: 3px;
                         top: 1px;
                         left: 1px;
-                        overflow: hidden;
-
-                        &::before {
-                            content: "";
-                            width: 10px;
-                            height: 10px;
-                            position: absolute;
-                            border-bottom: 2px solid #467b41;
-                            border-radius: 50%;
-                            top: -1px;
-                            left: 0px;
-                            transform: rotate(43deg);
-                            opacity: 0.7;
-                        }
-
-                        &::after {
-                            content: "";
-                            width: 10px;
-                            height: 10px;
-                            position: absolute;
-                            border-right: 2px solid #467b41;
-                            border-radius: 50%;
-                            top: 0px;
-                            left: -0.5px;
-                            transform: rotate(352deg);
-                            opacity: 0.7;
-                        }
-
-                        .cute-eye-inside-light {
-                            background-color: white;
-                            width: 3px;
-                            height: 3px;
-                            border-radius: 50%;
-                            position: absolute;
-                            top: 2px;
-                            left: 2px;
-                            z-index: 1;
-                        }
-                        .cute-eye-inside-black {
-                            background-color: black;
-                            width: 6px;
-                            height: 6px;
-                            border-radius: 50%;
-                            left: 2.5px;
-                            top: 2px;
-                            position: absolute;
-                        }
+                        border-radius: 50%;
+                        position: absolute;
+                        z-index: 1;
+                        animation-name: eye-light-animation;
+                        animation-duration: $animation-timer;
+                        animation-iteration-count: infinite;
                     }
                 }
                 .eyebrow {
@@ -118,6 +78,7 @@ $animation-timer: 4s;
                 &.emoji-head-eye-left {
                     .eyebrow {
                         width: 10px;
+                        z-index: 2;
                         animation-name: eyebrow-left-animation;
                         animation-duration: $animation-timer;
                         animation-iteration-count: infinite;
@@ -127,6 +88,7 @@ $animation-timer: 4s;
                     left: 18px;
 
                     .eyebrow {
+                        z-index: 2;
                         animation-name: eyebrow-right-animation;
                         animation-duration: $animation-timer;
                         animation-iteration-count: infinite;
@@ -164,11 +126,72 @@ $animation-timer: 4s;
             }
         }
     }
-    .message {
+    .back-message {
+        font-family: "Luckiest Guy", cursive;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 22px;
         text-shadow: #000000 1px 1px 0px;
+        position: absolute;
+        margin-top: -21px;
+        margin-left: 25px;
+        span {
+            &:nth-child(1) {
+                animation-name: bo-back-animation;
+                animation-duration: $animation-timer;
+                animation-iteration-count: infinite;
+            }
+            &:nth-child(2) {
+                animation-name: ra-back-animation;
+                animation-duration: $animation-timer;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    .message {
+        display: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 22px;
+        text-shadow: #000000 1px 1px 0px;
+        //Luckiest Guy
+        //"Honk", system-ui
+        font-family: "Amatic SC", sans-serif;
+        font-family: "Bebas Neue", sans-serif;
+        font-family: "Black Ops One", system-ui;
+        font-family: "Bungee Inline", sans-serif;
+        font-family: "Bungee Shade", sans-serif;
+        font-family: "Concert One", sans-serif;
+        font-family: "Dancing Script", cursive;
+        font-family: "DM Serif Display", serif;
+        font-family: "Dokdo", system-ui;
+        font-family: "Honk", system-ui;
+        font-family: "Julee", cursive;
+        font-family: "Limelight", sans-serif;
+        font-family: "Luckiest Guy", cursive;
+        font-family: "Megrim", system-ui;
+        font-family: "Nanum Brush Script", cursive;
+        font-family: "Orbitron", sans-serif;
+        font-family: "Pacifico", cursive;
+        font-family: "Permanent Marker", cursive;
+        font-family: "Pirata One", system-ui;
+        font-family: "Pixelify Sans", sans-serif;
+        font-family: "Poor Story", system-ui;
+        font-family: "Protest Revolution", sans-serif;
+        font-family: "Protest Strike", sans-serif;
+        font-family: "Quantico", sans-serif;
+        font-family: "Reenie Beanie", cursive;
+        font-family: "Roboto", sans-serif;
+        font-family: "Rock Salt", cursive;
+        font-family: "Rubik Bubbles", system-ui;
+        font-family: "Rubik Moonrocks", sans-serif;
+        font-family: "Rye", serif;
+        font-family: "Shadows Into Light", cursive;
+        font-family: "Single Day", cursive;
+        font-family: "Six Caps", sans-serif;
+        font-family: "Stardos Stencil", system-ui;
+        font-family: "Luckiest Guy", cursive;
+
         span {
             &:nth-child(1) {
                 color: #eb0000;
@@ -192,6 +215,139 @@ $animation-timer: 4s;
             }
         }
     }
+    .arm {
+        width: 22px;
+        height: 22px;
+        background-color: #ffd54f;
+        border-radius: 50%;
+        position: absolute;
+        left: 11px;
+        overflow: hidden;
+        border: 0.5px solid #d7a400;
+
+        &::before {
+            content: "";
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            border-right: 6px solid #ffca28;
+            border-radius: 50%;
+            top: -1px;
+            left: -4px;
+            transform: rotate(46deg);
+            opacity: 0.7;
+        }
+
+        &.arm-left {
+            width: 20px;
+            height: 20px;
+
+            animation-name: arm-left-animation;
+            animation-duration: $animation-timer;
+            animation-iteration-count: infinite;
+        }
+
+        &.arm-right {
+            animation-name: arm-right-animation;
+            animation-duration: $animation-timer;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@keyframes bo-back-animation {
+    0% {
+        color: #ff4081;
+    }
+    16% {
+        color: #ff4081;
+    }
+    32% {
+        color: #ffd54f;
+    }
+    100% {
+        color: #ffd54f;
+    }
+}
+
+@keyframes ra-back-animation {
+    0% {
+        color: #ffd54f;
+    }
+    20% {
+        color: #ffd54f;
+    }
+    50% {
+        color: #ff4081;
+    }
+    100% {
+        color: #ff4081;
+    }
+}
+
+@keyframes eye-light-animation {
+    0% {
+        width: 3px;
+        height: 3px;
+    }
+    16% {
+        width: 2px;
+        height: 2px;
+        opacity: 0.95;
+    }
+    32% {
+        width: 3px;
+        height: 3px;
+    }
+    100% {
+        width: 3px;
+        height: 3px;
+    }
+}
+
+@keyframes arm-left-animation {
+    0% {
+        top: 39px;
+        left: 25px;
+    }
+    16% {
+        top: 39px;
+        left: 25px;
+    }
+    32% {
+        top: 0px;
+        left: 11px;
+    }
+    100% {
+        top: 0px;
+        left: 11px;
+    }
+}
+
+@keyframes arm-right-animation {
+    0% {
+        top: 39px;
+        left: 63px;
+    }
+    16% {
+        top: 39px;
+        left: 63px;
+    }
+    32% {
+        top: 0px;
+        left: 100px;
+    }
+    // @for $i from 0 through 3 {
+    //     $calculation: 33 + ((100 - 33) / 3 * $i);
+    //     #{$calculation}% {
+    //         top: 0px;
+    //         left: 100px;
+    //     }
+    // }
+    100% {
+        top: 0px;
+        left: 100px;
+    }
 }
 
 @keyframes bo-animation {
@@ -205,11 +361,11 @@ $animation-timer: 4s;
         top: 37px;
     }
     32% {
-        left: 6px;
+        left: 0px;
         top: 16px;
     }
     100% {
-        left: 6px;
+        left: 0px;
         top: 16px;
     }
 }
@@ -347,8 +503,8 @@ $animation-timer: 4s;
 @keyframes mouth {
     0% {
         width: 11px;
-        height: 6px;
-        border-radius: 10% 10% 30% 30%;
+        height: 8px;
+        border-radius: 50% 50% 50% 50%;
     }
     12% {
         width: 6px;
@@ -362,13 +518,13 @@ $animation-timer: 4s;
     }
     36% {
         width: 11px;
-        height: 6px;
-        border-radius: 10% 10% 30% 30%;
+        height: 8px;
+        border-radius: 50% 50% 50% 50%;
     }
     100% {
         width: 11px;
-        height: 6px;
-        border-radius: 10% 10% 30% 30%;
+        height: 8px;
+        border-radius: 50% 50% 50% 50%;
     }
 }
 

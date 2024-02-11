@@ -82,6 +82,7 @@ export class RepeatsComponent {
   listenTimestamp(timestamp: number) {
     this.repeatsModels.limitStopwatch = timestamp;
     this.stopwatchEditable = false;
+    this.saveRepeatsModels();
   }
 
   stopwatchEdit() {
