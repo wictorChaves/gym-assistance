@@ -154,42 +154,6 @@ $animation-timer: 4s;
         font-weight: bold;
         font-size: 22px;
         text-shadow: #000000 1px 1px 0px;
-        //Luckiest Guy
-        //"Honk", system-ui
-        font-family: "Amatic SC", sans-serif;
-        font-family: "Bebas Neue", sans-serif;
-        font-family: "Black Ops One", system-ui;
-        font-family: "Bungee Inline", sans-serif;
-        font-family: "Bungee Shade", sans-serif;
-        font-family: "Concert One", sans-serif;
-        font-family: "Dancing Script", cursive;
-        font-family: "DM Serif Display", serif;
-        font-family: "Dokdo", system-ui;
-        font-family: "Honk", system-ui;
-        font-family: "Julee", cursive;
-        font-family: "Limelight", sans-serif;
-        font-family: "Luckiest Guy", cursive;
-        font-family: "Megrim", system-ui;
-        font-family: "Nanum Brush Script", cursive;
-        font-family: "Orbitron", sans-serif;
-        font-family: "Pacifico", cursive;
-        font-family: "Permanent Marker", cursive;
-        font-family: "Pirata One", system-ui;
-        font-family: "Pixelify Sans", sans-serif;
-        font-family: "Poor Story", system-ui;
-        font-family: "Protest Revolution", sans-serif;
-        font-family: "Protest Strike", sans-serif;
-        font-family: "Quantico", sans-serif;
-        font-family: "Reenie Beanie", cursive;
-        font-family: "Roboto", sans-serif;
-        font-family: "Rock Salt", cursive;
-        font-family: "Rubik Bubbles", system-ui;
-        font-family: "Rubik Moonrocks", sans-serif;
-        font-family: "Rye", serif;
-        font-family: "Shadows Into Light", cursive;
-        font-family: "Single Day", cursive;
-        font-family: "Six Caps", sans-serif;
-        font-family: "Stardos Stencil", system-ui;
         font-family: "Luckiest Guy", cursive;
 
         span {
@@ -337,13 +301,6 @@ $animation-timer: 4s;
         top: 0px;
         left: 100px;
     }
-    // @for $i from 0 through 3 {
-    //     $calculation: 33 + ((100 - 33) / 3 * $i);
-    //     #{$calculation}% {
-    //         top: 0px;
-    //         left: 100px;
-    //     }
-    // }
     100% {
         top: 0px;
         left: 100px;
